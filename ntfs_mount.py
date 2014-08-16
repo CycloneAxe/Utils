@@ -37,7 +37,8 @@ def mount_ntfs():
 		if not os.path.isdir(ntfs_volume):
 			os.makedirs(ntfs_volume)
 
-		print('sudo /sbin/mount_ntfs -o rw,nobrowse %s %s' % (device_node, ntfs_volume.replace(' ', '\ ')))
+		# ntfs_volume = ntfs_volume.replace(' ', '\ ')
+		print('sudo /sbin/mount_ntfs -o rw,nobrowse %s %s' % (device_node, ntfs_volume))
 		subprocess.check_output([
 			'sudo',
 			'mount_ntfs',
