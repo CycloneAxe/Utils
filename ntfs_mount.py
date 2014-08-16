@@ -41,7 +41,7 @@ def mount_ntfs():
 		print('sudo /sbin/mount_ntfs -o rw,nobrowse %s %s' % (device_node, ntfs_volume))
 		subprocess.check_output([
 			'sudo',
-			'mount_ntfs',
+			'/sbin/mount_ntfs',
 			'-o',
 			'rw,nobrowse',
 			device_node,
